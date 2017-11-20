@@ -1,0 +1,12 @@
+<h1>Games Score</h1>
+<% if @result === "valid" %>
+<p>Congratulations ! <%= @userinput %> is a valid English Word</p>
+<% elsif @result === "unvalid" %>
+<p>Sorry, but <%= @userinput %> doesn't seem to be a valid English word...</p>
+<% elsif @result === "unscope"%>
+<p>Sorry, but <%= @userinput %> can't be build out of <%= @current_game_letters %></p>
+<% else %>
+<p>IMPOSSIBLE</p>
+<% end %>
+
+<%= link_to "Restart Game", "new"%>
